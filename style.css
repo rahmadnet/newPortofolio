@@ -279,7 +279,7 @@ section .title::after {
 }
 
 .about .about-content .right p {
-    text-align: inherit;
+    text-align: justify;
 }
 
 .about .about-content .right a {

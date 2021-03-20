@@ -772,6 +772,10 @@ footer span a:hover {
     .service .service-content .card {
         width: 100%;
     }
+
+    .teams .card .box .text{
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 500px) {

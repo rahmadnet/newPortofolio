@@ -85,7 +85,7 @@ $(document).ready(function () {
         formData.append('from_name', name);
         formData.append('to_name', 'Rahmadnet');
         formData.append('message_html', message);
-        formData.append('service_id', 'gmail');
+        formData.append('service_id', 'service_j8coand');
         formData.append('template_id', 'template_3u43eyr');
         formData.append('user_id', 'user_T3Fa3Wg8LlyHxZ05Gnaqa');
 

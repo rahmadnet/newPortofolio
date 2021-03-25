@@ -73,5 +73,33 @@ $(document).ready(function () {
     });
 
     // send email
-    
+    $('#contact-form').on('submit', function(event){
+        event.preventDefault();
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var subject = $('#subject').val();
+        var message = $('#message').val();
+
+        var formData = new FormData(this);
+        formData.append('reply_to', email);
+        formData.append('from_name', name);
+        formData.append('to_name', 'Rahmadnet');
+        formData.append('message_html', message);
+        formData.append('service_id', 'gmail');
+        formData.append('template_id', 'template_3u43eyr');
+        formData.append('user_id', 'user_T3Fa3Wg8LlyHxZ05Gnaqa');
+
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+					type: 'POST',
+					data: formData,
+					contentType: false, // auto-detection
+					processData: false // no need to parse formData to string
+			}).done(function () {
+					console.log(contact);
+					contact.css({'width': '0px'});
+					alert('Email terkirim!');
+			}).fail(function (error) {
+					alert('Oops... ' + JSON.stringify(error));
+			});
+    });
 });

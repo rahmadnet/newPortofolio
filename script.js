@@ -95,8 +95,6 @@ $(document).ready(function () {
 					contentType: false, // auto-detection
 					processData: false // no need to parse formData to string
 			}).done(function () {
-					console.log(contact);
-					contact.css({'width': '0px'});
 					alert('Email terkirim!');
 			}).fail(function (error) {
 					alert('Oops... ' + JSON.stringify(error));

@@ -86,7 +86,7 @@ $(document).ready(function () {
         formData.append('to_name', 'Rahmadnet');
         formData.append('message_html', message);
         formData.append('service_id', 'service_j8coand');
-        formData.append('template_id', 'template_3u43eyr');
+        formData.append('template_id', 'template_v7fqb4x');
         formData.append('user_id', 'user_T3Fa3Wg8LlyHxZ05Gnaqa');
 
         $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
